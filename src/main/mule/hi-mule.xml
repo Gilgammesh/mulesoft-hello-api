@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="hello-mule-apiFlow1"
+		doc:id="7e0ae3e6-e627-48a0-8405-fc870f4783dd">
+		<http:listener doc:name="Listener"
+			doc:id="0c8e931b-2c54-41d2-b486-69bc436e9773"
+			config-ref="HTTP_Listener_config" path="hi-mule" allowedMethods="GET" />
+		<logger level="INFO" doc:name="Logger"
+			doc:id="ca7589cd-ea07-41de-842e-d026f0bbf772"
+			message="Hi mulesoft ESB" />
+	</flow>
+</mule>
